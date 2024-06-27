@@ -1,0 +1,295 @@
+@use "variable";
+@use "mixin";
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family:variable.$primary-font;
+}
+
+html{
+    font-size:15px;
+}
+
+/*------header & hero section------------*/
+
+header{
+    width:100%;
+    height:450px;
+    background-image:url("https://e0.pxfuel.com/wallpapers/149/259/desktop-wallpaper-web-development.jpg");
+    background-repeat:no-repeat;
+    background-size: cover;
+    text-align:center;
+    background-position: bottom;
+
+
+   nav{
+    @include mixin.flex-prop();
+    padding:10px 40px;
+    align-items: center;
+    background-color:rgba(255,255,255,0.2);
+    backdrop-filter: blur(10px);
+
+    @include mixin.respond-to(mobile) {
+        padding:10px;
+      } 
+
+   
+    
+    ul{
+        @include mixin.flex-prop();
+        gap:60px;
+
+        @include mixin.respond-to(mobile) {
+            gap:20px;
+          } 
+
+        li{
+            list-style-type: none;
+          
+            a{
+                color:variable.$light-color;
+                text-decoration: none;
+                font-weight:500;
+                font-size:16px;
+
+                @include mixin.respond-to(mobile) {
+                    font-size:14px;
+                  } 
+            }
+        }
+    }
+  }
+
+    .headings{
+         margin-top:5rem;
+
+         h1{
+           color:variable.$light-color;
+           font-weight:400;
+           font-size:3rem;
+           @include mixin.respond-to(mobile){
+            font-size:2.5rem;
+           }
+         }
+         h6{
+            color:variable.$light-color;
+            font-weight:300;
+            font-size:1rem;
+            margin-top:10px;
+            @include mixin.respond-to(mobile){
+                font-size:0.85rem;
+               }
+         }
+    }
+}
+
+
+/*----------info section ----------*/
+
+.inner{
+    max-width:1200px;
+    margin:0 auto;
+}
+
+
+section.flex-box{
+    @include mixin.flex-prop();
+
+}
+
+// buttons
+.more{
+    padding:8px 20px;
+    border:0;
+    background-color:variable.$primary-color;
+    color:variable.$light-color;
+    font-size:1rem;
+    font-weight:400;
+   
+}
+
+section.info{
+    
+      padding:2rem 0;
+
+    section{
+        width:30%;
+        padding:30px 10px;
+
+        @include mixin.respond-to(mobile){
+            width:100%;
+            padding:30px;
+           }
+
+        h2{
+            font-size:1.4rem;
+            font-weight:600;
+            margin-bottom:10px;
+            line-height:2rem;
+            // color:variable.$primary-color;
+        }
+        p{
+            font-size:15px;;
+            font-weight:300;
+            margin-bottom:20px;
+            line-height:1.5rem;
+        }
+        
+       
+    }
+    hr{
+        width:0.5px;
+        border:none;
+        background-color:#dfdfdf;
+
+    }
+}
+
+
+/*------testimonials section-----*/
+.testimonial-wrapper{
+    width:100%;
+    padding:30px 10px;
+    text-align:center;
+    background-color: variable.$primary-color;
+    color:variable.$light-color;
+
+    
+
+    h2{
+        font-size:2rem;
+        font-weight:500;
+        margin-bottom:15px;
+    }
+
+    p{
+        font-size:1rem;
+        font-weight:200;
+        margin-bottom:30px;
+    }
+
+     .flex-box{
+        @include mixin.flex-prop();
+        gap:20px;
+
+        @include mixin.respond-to(tablet){
+            gap:0px;
+           }
+     }
+     .testimonial{
+        width:23%;
+        border:1px solid #a0c2e8;
+        padding:2rem 0;
+
+        @include mixin.respond-to(mobile){
+            width:100%;
+            margin:10px 30px;
+           }
+
+        img{
+            border-radius:100%;
+            object-fit:cover;
+            width:80%;
+            height:50%;
+
+        }
+        .star-review{
+            margin-top:10px;
+            color:goldenrod;
+        }
+        h3{
+            font-size:1.5rem;
+            font-weight:400;
+            margin:1rem 0 0.5rem ;
+        }
+        p{
+            font-size:0.9rem;
+            font-weight:200;
+            padding:0px 20px;
+        }
+       
+    }
+}
+
+/*------image gallery section-----*/
+
+.image-gallery{
+    padding:2rem 0;
+
+    h2{
+        text-align:center;
+        font-size:2.5rem;
+        font-weight:500;
+        color:variable.$primary-color;
+        margin-bottom:0.5rem;
+    }
+    h5{
+        text-align:center;
+        font-size:1rem;
+        font-weight:200;
+        color:rgb(49, 46, 46);
+        margin-bottom:2rem;
+    }
+
+    .flex-box{
+        @include mixin.flex-prop();
+        gap:20px;
+
+        .left,.right{
+            width:48%;
+            // text-align:center;
+            @include mixin.respond-to(mobile){
+                width:100%;
+                padding:30px;
+               }
+            
+
+            img{
+                width:100%;
+                object-fit: cover;;
+            }
+            h3{
+                font-size:2rem;
+                margin:1rem 0rem;
+                font-weight:400;
+                color:variable.$primary-color;
+            }
+            p{
+                margin:1rem 0;
+                font-weight:300;
+                color:gray;
+            }
+        }
+
+     }
+}
+
+/*------footer--------*/
+
+footer{
+    @include mixin.flex-prop();
+    padding-bottom:1rem;
+
+    @include mixin.respond-to(mobile){
+       justify-content: center;
+       gap:20px;
+       }
+
+    .footer-hr{
+        width:100%;
+        height:1px;
+        margin-bottom:1rem;
+    }
+    p{
+        color:gray;
+        
+    }
+    i{
+        font-size:1.5rem;
+        padding:0px 10px;
+        color:variable.$primary-color;
+    }
+}

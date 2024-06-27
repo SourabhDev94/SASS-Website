@@ -1,0 +1,275 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+}
+
+html {
+  font-size: 15px;
+}
+
+/*------header & hero section------------*/
+header {
+  width: 100%;
+  height: 450px;
+  background-image: url("https://e0.pxfuel.com/wallpapers/149/259/desktop-wallpaper-web-development.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  background-position: bottom;
+}
+header nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 10px 40px;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+}
+@media (max-width: 480px) {
+  header nav {
+    padding: 10px;
+  }
+}
+header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 60px;
+}
+@media (max-width: 480px) {
+  header nav ul {
+    gap: 20px;
+  }
+}
+header nav ul li {
+  list-style-type: none;
+}
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+}
+@media (max-width: 480px) {
+  header nav ul li a {
+    font-size: 14px;
+  }
+}
+header .headings {
+  margin-top: 5rem;
+}
+header .headings h1 {
+  color: #fff;
+  font-weight: 400;
+  font-size: 3rem;
+}
+@media (max-width: 480px) {
+  header .headings h1 {
+    font-size: 2.5rem;
+  }
+}
+header .headings h6 {
+  color: #fff;
+  font-weight: 300;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+@media (max-width: 480px) {
+  header .headings h6 {
+    font-size: 0.85rem;
+  }
+}
+
+/*----------info section ----------*/
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+section.flex-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.more {
+  padding: 8px 20px;
+  border: 0;
+  background-color: #4a88cf;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+section.info {
+  padding: 2rem 0;
+}
+section.info section {
+  width: 30%;
+  padding: 30px 10px;
+}
+@media (max-width: 480px) {
+  section.info section {
+    width: 100%;
+    padding: 30px;
+  }
+}
+section.info section h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  line-height: 2rem;
+}
+section.info section p {
+  font-size: 15px;
+  font-weight: 300;
+  margin-bottom: 20px;
+  line-height: 1.5rem;
+}
+section.info hr {
+  width: 0.5px;
+  border: none;
+  background-color: #dfdfdf;
+}
+
+/*------testimonials section-----*/
+.testimonial-wrapper {
+  width: 100%;
+  padding: 30px 10px;
+  text-align: center;
+  background-color: #4a88cf;
+  color: #fff;
+}
+.testimonial-wrapper h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+.testimonial-wrapper p {
+  font-size: 1rem;
+  font-weight: 200;
+  margin-bottom: 30px;
+}
+.testimonial-wrapper .flex-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+@media (max-width: 768px) {
+  .testimonial-wrapper .flex-box {
+    gap: 0px;
+  }
+}
+.testimonial-wrapper .testimonial {
+  width: 23%;
+  border: 1px solid #a0c2e8;
+  padding: 2rem 0;
+}
+@media (max-width: 480px) {
+  .testimonial-wrapper .testimonial {
+    width: 100%;
+    margin: 10px 30px;
+  }
+}
+.testimonial-wrapper .testimonial img {
+  border-radius: 100%;
+  object-fit: cover;
+  width: 80%;
+  height: 50%;
+}
+.testimonial-wrapper .testimonial .star-review {
+  margin-top: 10px;
+  color: goldenrod;
+}
+.testimonial-wrapper .testimonial h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: 1rem 0 0.5rem;
+}
+.testimonial-wrapper .testimonial p {
+  font-size: 0.9rem;
+  font-weight: 200;
+  padding: 0px 20px;
+}
+
+/*------image gallery section-----*/
+.image-gallery {
+  padding: 2rem 0;
+}
+.image-gallery h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: #4a88cf;
+  margin-bottom: 0.5rem;
+}
+.image-gallery h5 {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 200;
+  color: rgb(49, 46, 46);
+  margin-bottom: 2rem;
+}
+.image-gallery .flex-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+.image-gallery .flex-box .left, .image-gallery .flex-box .right {
+  width: 48%;
+}
+@media (max-width: 480px) {
+  .image-gallery .flex-box .left, .image-gallery .flex-box .right {
+    width: 100%;
+    padding: 30px;
+  }
+}
+.image-gallery .flex-box .left img, .image-gallery .flex-box .right img {
+  width: 100%;
+  object-fit: cover;
+}
+.image-gallery .flex-box .left h3, .image-gallery .flex-box .right h3 {
+  font-size: 2rem;
+  margin: 1rem 0rem;
+  font-weight: 400;
+  color: #4a88cf;
+}
+.image-gallery .flex-box .left p, .image-gallery .flex-box .right p {
+  margin: 1rem 0;
+  font-weight: 300;
+  color: gray;
+}
+
+/*------footer--------*/
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+}
+@media (max-width: 480px) {
+  footer {
+    justify-content: center;
+    gap: 20px;
+  }
+}
+footer .footer-hr {
+  width: 100%;
+  height: 1px;
+  margin-bottom: 1rem;
+}
+footer p {
+  color: gray;
+}
+footer i {
+  font-size: 1.5rem;
+  padding: 0px 10px;
+  color: #4a88cf;
+}
+
+/*# sourceMappingURL=style.css.map */
